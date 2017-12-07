@@ -2,8 +2,11 @@
 
 ```BASH
 docker build --force-rm --no-cache --tag=dtulyakov/debian-9_cpp:latest . \
-  && docker create --restart=always \
+  && docker run --rm \
      --name=debian-9_cpp \
-     dtulyakov/debian-9_cpp \
+     --volumes-from $(pwd)/DEB:/opt \
+     --volumes-from $(pwd):/opt/repo \
+     dtulyakov/debian-9_cpp:latest \
+     sh -c "cd /opt/repo && gbp buildpackage -uc -us"
 
 ```
