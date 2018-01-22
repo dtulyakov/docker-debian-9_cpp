@@ -30,5 +30,6 @@ RUN set -x \
      libsystemd-dev \
      librocksdb-dev \
      zlib1g-dev \
+     libgeoip-dev \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
