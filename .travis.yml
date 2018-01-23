@@ -16,14 +16,14 @@ services:
   - docker
 
 before_install:
-- docker build -t dtulyakov/debian-9_cpp:latest .
+- docker build -t dtulyakov/debian-9_cpp:latest
 - docker run -d dtulyakov/debian-9_cpp:latest sh -c "gbp --list-cmds"
 
 script:
 - date
 
-after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push dtulyakov/debian-9_cpp:latest;
-    fi
+#after_success:
+  #- if [ "$TRAVIS_BRANCH" == "master" ]; then
+    #docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    #docker push dtulyakov/debian-9_cpp:latest;
+    #fi

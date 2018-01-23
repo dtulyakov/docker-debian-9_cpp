@@ -31,5 +31,6 @@ RUN set -x \
      librocksdb-dev \
      zlib1g-dev \
      libgeoip-dev \
+     geoip-database \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
