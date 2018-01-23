@@ -25,5 +25,5 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    #docker push dtulyakov/debian-9_cpp:latest;
+    docker pull dtulyakov/debian-9_cpp:latest;
     fi
