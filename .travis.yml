@@ -16,6 +16,7 @@ services:
   - docker
 
 before_install:
+- sleep 900
 - docker build -t dtulyakov/debian-9_cpp:latest .
 - docker run -d dtulyakov/debian-9_cpp:latest sh -c "gbp --list-cmds"
 
