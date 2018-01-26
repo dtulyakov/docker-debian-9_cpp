@@ -32,5 +32,6 @@ RUN set -x \
      zlib1g-dev \
      libgeoip-dev \
      geoip-database \
+     geoip-database-extra \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
