@@ -33,5 +33,6 @@ RUN set -x \
      libgeoip-dev \
      geoip-database \
      geoip-database-extra \
+     golang \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
