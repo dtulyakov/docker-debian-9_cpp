@@ -34,5 +34,7 @@ RUN set -x \
      geoip-database \
      geoip-database-extra \
      golang \
+     libyajl-dev \
+     libxml2-dev \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
