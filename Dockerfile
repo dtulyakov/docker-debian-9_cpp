@@ -33,6 +33,7 @@ RUN set -x \
      libgeoip-dev \
      geoip-database \
      geoip-database-extra \
+     ca-certificates \
      golang \
      libyajl-dev \
      libxml2-dev \
