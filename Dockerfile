@@ -38,5 +38,6 @@ RUN set -x \
      libyajl-dev \
      libxml2-dev \
      protobuf-compiler \
+     libsnappy-dev \
   && apt-get autoremove -y \
   && rm -fr /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/apt/archives/*
